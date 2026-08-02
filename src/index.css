@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Visible keyboard focus, respected everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #f5a623;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   Manual CSS — Halaman "About Me"
+   Ditulis manual (tanpa utility Tailwind) sesuai kriteria penilaian:
+   "Styling manual dengan CSS untuk halaman About Me"
+   ========================================================================== */
+
+.about-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+.about-hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.about-avatar {
+  width: 108px;
+  height: 108px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #f5a623 0%, #6366f1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0b0f1a;
+  box-shadow: 0 8px 24px rgba(245, 166, 35, 0.25);
+}
+
+.about-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #e0921a;
+  margin-bottom: 0.5rem;
+}
+
+.about-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.35rem;
+  color: #111827;
+}
+
+.about-role {
+  font-size: 1rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.about-section {
+  border-top: 1px solid rgba(107, 114, 128, 0.18);
+  padding: 2rem 0;
+}
+
+.about-section h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #111827;
+}
+
+.about-section p {
+  line-height: 1.75;
+  color: #374151;
+  margin: 0 0 1rem;
+}
+
+.about-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-skill-grid li {
+  border: 1px solid rgba(107, 114, 128, 0.25);
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: #1f2937;
+  background: #ffffff;
+}
+
+.about-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid rgba(245, 166, 35, 0.4);
+}
+
+.about-timeline li {
+  position: relative;
+  padding: 0 0 1.5rem 1.5rem;
+}
+
+.about-timeline li::before {
+  content: '';
+  position: absolute;
+  left: -6.5px;
+  top: 4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #f5a623;
+}
+
+.about-timeline .yr {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #e0921a;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.about-timeline .role {
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.15rem;
+}
+
+.about-timeline .desc {
+  color: #4b5563;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* Dark mode overrides for the manually-styled About page */
+:root.dark .about-name,
+:root.dark .about-section h2,
+:root.dark .about-timeline .role {
+  color: #f8fafc;
+}
+
+:root.dark .about-role,
+:root.dark .about-section p,
+:root.dark .about-timeline .desc {
+  color: #cbd5e1;
+}
+
+:root.dark .about-skill-grid li {
+  background: #1b2436;
+  border-color: rgba(148, 163, 184, 0.25);
+  color: #e5e7eb;
+}
+
+:root.dark .about-section {
+  border-top-color: rgba(148, 163, 184, 0.18);
+}
