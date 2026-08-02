@@ -6,7 +6,7 @@ export default function Footer() {
         <p className="font-mono">© {year} Aditya Rahmatdiyansyah. Dibangun dengan React &amp; Tailwind CSS.</p>
         <div className="flex gap-4">
           <a
-            href="https://github.com/username"
+            href="https://github.com/randyaadt"
             target="_blank"
             rel="noreferrer"
             className="hover:text-amber-500 transition-colors"
@@ -14,7 +14,7 @@ export default function Footer() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/username"
+            href="https://www.linkedin.com/in/aditya-rahmatdiyansyah-3a6847311/"
             target="_blank"
             rel="noreferrer"
             className="hover:text-amber-500 transition-colors"
