@@ -54,82 +54,9 @@ portfolio-app/
 
 ## 🚀 Menjalankan Secara Lokal
 
-Pastikan Node.js versi 18+ sudah terpasang.
-
-```bash
-npm install
-npm run dev
-```
-
 `http://localhost:5173`.
 
 ## 🧪 Menjalankan Test
 
-```bash
 npm test
-```
 
-Test mencakup:
-- Navbar menampilkan seluruh tautan navigasi dan tombol dark mode.
-- Form kontak menampilkan pesan error saat kosong.
-- Form kontak memvalidasi format email.
-- Form kontak menampilkan pesan sukses saat data valid.
-
-## 🏗️ Build untuk Produksi
-
-```bash
-npm run build
-npm run preview   # opsional, untuk preview hasil build
-```
-
-Hasil build ada di folder `dist/`.
-
-## ☁️ Deployment
-
-### Opsi 1 — Vercel (disarankan, paling mudah untuk Vite SPA)
-1. Push kode ke GitHub.
-2. Buka [vercel.com](https://vercel.com) → **Add New Project** → import repo.
-3. Framework preset: **Vite**. Build command: `npm run build`. Output dir: `dist`.
-4. Deploy. File `vercel.json` sudah mengatur rewrite agar routing (`/about`,
-   `/projects`, dll) tidak 404 saat refresh.
-
-### Opsi 2 — Netlify
-1. Push kode ke GitHub.
-2. Buka [netlify.com](https://netlify.com) → **Add new site** → import repo.
-3. Build command: `npm run build`, Publish directory: `dist`.
-4. File `public/_redirects` sudah menangani SPA routing.
-
-### Opsi 3 — GitHub Pages
-1. Push kode ke branch `main`.
-2. Aktifkan GitHub Pages di **Settings → Pages → Source: GitHub Actions**.
-3. Workflow `.github/workflows/deploy.yml` akan otomatis build & deploy.
-4. Karena GitHub Pages berada di sub-path (`/nama-repo/`), sesuaikan:
-   - `vite.config.js` → tambahkan `base: '/nama-repo/'`
-   - `main.jsx` → `<BrowserRouter basename="/nama-repo">`
-
-## ✅ Checklist Kriteria Penilaian
-
-- **HTML/CSS/JS dasar** — struktur semantik (`header`, `nav`, `main`,
-  `footer`) di semua halaman; styling manual di `About.jsx` +
-  `index.css`; validasi form murni JavaScript di `Contact.jsx`.
-- **Bootstrap/Tailwind** — halaman Proyek & Kontak memakai Tailwind CSS
-  sepenuhnya.
-- **Git & Hosting** — commit bertahap per fitur (lihat riwayat commit),
-  siap deploy ke Vercel/Netlify/GitHub Pages.
-- **Framework** — React (SPA) dengan React Router, komponen modular
-  (`Navbar`, `Footer`, `ProjectCard`), state management (`useState`,
-  `useContext` untuk tema, filter, dan form).
-- **Optimasi & Testing** — `React.lazy`/`Suspense` untuk code splitting per
-  halaman, `loading="lazy"` pada gambar proyek, test dengan Vitest +
-  Testing Library.
-- **Deployment & fitur tambahan** — desain responsif (mobile-first,
-  breakpoint `sm`/`md`), dark mode dengan penyimpanan preferensi di
-  `localStorage`.
-
-## ✏️ Kustomisasi
-
-- Ganti data proyek di `src/data/projects.js`.
-- Ganti nama, bio, dan timeline di `src/pages/About.jsx`.
-- Ganti tautan sosial di `src/components/Footer.jsx`.
-- Sambungkan form kontak ke layanan nyata (mis. Formspree, EmailJS, atau
-  API sendiri) di fungsi `handleSubmit` pada `src/pages/Contact.jsx`.
