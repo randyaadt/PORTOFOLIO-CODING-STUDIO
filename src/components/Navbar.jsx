@@ -30,7 +30,7 @@ export default function Navbar() {
           to="/"
           className="font-display font-bold text-lg text-ink-950 dark:text-paper-50"
         >
-          alex<span className="text-amber-500">.dev</span>
+          aditya<span className="text-amber-500">.dev</span>
         </NavLink>
 
         <div className="hidden md:flex items-center gap-1">

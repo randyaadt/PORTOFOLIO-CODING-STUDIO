@@ -18,7 +18,7 @@ describe('Navbar', () => {
   it('menampilkan logo dan semua tautan navigasi utama', () => {
     renderNavbar()
 
-    expect(screen.getByText(/alex/i)).toBeInTheDocument()
+    expect(screen.getByText(/aditya/i)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Beranda' })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Tentang' })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Proyek' })).toBeInTheDocument()

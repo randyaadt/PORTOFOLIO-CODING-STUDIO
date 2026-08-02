@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 const commands = [
-  { cmd: 'whoami', out: 'Alex Pratama — Frontend Developer' },
+  { cmd: 'whoami', out: 'Aditya Rahmatdiyansyah — Frontend Developer' },
   { cmd: 'skills --list', out: 'React · JavaScript · Tailwind CSS · Git' },
   { cmd: 'status', out: 'Terbuka untuk kolaborasi & proyek baru 🚀' },
 ]
@@ -22,7 +22,7 @@ function Terminal() {
         <span className="w-3 h-3 rounded-full bg-red-400/80" />
         <span className="w-3 h-3 rounded-full bg-amber-400/80" />
         <span className="w-3 h-3 rounded-full bg-green-400/80" />
-        <span className="ml-3 font-mono text-xs text-paper-100/50">alex@portfolio ~ zsh</span>
+        <span className="ml-3 font-mono text-xs text-paper-100/50">aditya@portfolio ~ zsh</span>
       </div>
       <div className="p-5 font-mono text-sm space-y-3 min-h-[168px]">
         {commands.slice(0, visible).map((c, i) => (
@@ -51,7 +51,7 @@ export default function Home() {
           Membangun antarmuka web yang cepat, rapi, dan mudah dipakai.
         </h1>
         <p className="text-ink-700 dark:text-paper-100/75 leading-relaxed mb-8 max-w-md">
-          Halo, saya Alex — frontend developer yang senang mengubah ide menjadi
+          Halo, saya Aditt — frontend developer yang senang mengubah ide menjadi
           produk web yang nyaman digunakan, dari komponen kecil hingga aplikasi
           penuh.
         </p>
